@@ -1,6 +1,8 @@
 import React from 'react'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
+import ByCtegoryPage from './pages/ByCtegoryPage'
+import PorstDestailsPage from './pages/PorstDestailsPage'
 
 const App = () => {
   return (
@@ -8,9 +10,11 @@ const App = () => {
       <HashRouter>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
+         <Route path='/byCategory/:categoryID' element={<ByCtegoryPage/>}></Route>
+         <Route path='/postDetails/:postID' element={<PorstDestailsPage/>}></Route>
         </Routes>
+        
       </HashRouter>
-      
     </div>
   )
 }
