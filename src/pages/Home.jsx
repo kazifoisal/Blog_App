@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../layouts/layout'
+import BlogList from '../components/BlogList'
+import { newPosts } from '../APIrequests/APIrequest'
 
 const Home = () => {
+
+  const [list, setlist]= useState([]);
+
+
+
+useEffect(()=>{
+
+  (async()=>{
+
+   let res = await newPosts()
+
+    setlist(res)
+
+  })()
+
+},[])
+
+
   return (
   
       <Layout>
- <h1 className=' text-5xl  text-center my-1.5 py-2.5  text-red-600 hover:text-red-300 cursor-pointer  '>Home Page</h1>
+       <BlogList list={list} />
 
       </Layout>
      

@@ -15,3 +15,10 @@ export const postCtegories = async()=>{
     return []
    }
 }
+
+
+export const newPosts =async()=>{
+    let res = await axios.get(baseUrl+"/post-newest")
+
+    return res.data;
+}
