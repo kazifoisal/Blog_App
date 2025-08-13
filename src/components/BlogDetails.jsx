@@ -1,5 +1,4 @@
 
-
 const BlogDetails = (props) => {
   return (
     <>
