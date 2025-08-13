@@ -22,3 +22,9 @@ export const newPosts =async()=>{
 
     return res.data;
 }
+
+export const newPostsByCategories = async(id)=>{
+    let res = await axios.get(baseUrl+"/post-list/"+id)
+
+    return res.data;
+}
