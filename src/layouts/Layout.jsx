@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { postCtegories } from "../APIrequests/APIrequest";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Layout = (props) => {
   const [categories, setCategories] = useState([]);
@@ -48,7 +48,7 @@ const Layout = (props) => {
               ))}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Blog-Up</a>
+          <Link to={"/"} className="btn btn-ghost text-xl">Blog-Up</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">

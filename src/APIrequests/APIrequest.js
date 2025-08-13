@@ -28,3 +28,9 @@ export const newPostsByCategories = async(id)=>{
 
     return res.data;
 }
+
+export const postDetails = async(id)=>{
+    let res = await axios.get(baseUrl+"/post-details/"+id)
+
+    return res.data;
+}
